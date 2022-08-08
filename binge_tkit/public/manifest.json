@@ -1,0 +1,28 @@
+{
+  "name": "binge_tkit",
+  "description": "A toolkit for easier binging",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Click me"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "./static/js/content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "externally_connectable": {
+    "ids": ["*"],
+    "accepts_tls_channel_id": false
+  }
+}
